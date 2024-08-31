@@ -10,25 +10,30 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            color: #000000; /* Changed text color to black */
+            color: #000000;
+            padding: 10px;
         }
 
         h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin: 20px 0;
+            text-align: center;
         }
 
         main {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            margin-top: 3em;
+            margin-top: 2em;
             text-align: left;
-            max-width: 600px;
-            padding: 0 20px;
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #f5b663; /* Lighter background color for the main section */
+            border-radius: 10px; /* Rounded corners for a smoother appearance */
+            box-sizing: border-box;
         }
 
         h2 {
@@ -42,14 +47,16 @@
         }
 
         a.button {
+            display: inline-block;
             color: #ffffff;
             text-decoration: none;
-            font-size: 1.5em;
+            font-size: 1.2em;
             margin-top: 20px;
             background-color: #000000;
             padding: 10px 20px;
             border-radius: 5px;
             transition: background-color 0.3s;
+            text-align: center;
         }
 
         a.button:hover {
@@ -57,8 +64,10 @@
         }
 
         img {
-            width: 400px;
+            width: 100%;
+            max-width: 400px;
             margin-bottom: 20px;
+            height: auto;
         }
 
         dl {
@@ -68,22 +77,69 @@
         dt {
             font-size: 1.2em;
             margin: 10px 0;
-            color: #000000; /* Changed text color to black */
+            color: #000000;
         }
 
         dd {
             margin: 0 0 10px 20px;
             font-size: 1em;
-            color: #333333; /* Adjusted text color for better readability */
+            color: #333333;
         }
 
         a.link {
-            color: #000000; /* Changed link color to black */
+            color: #000000;
             text-decoration: underline;
         }
 
         a.link:hover {
             text-decoration: none;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            a.button {
+                font-size: 1em;
+                padding: 10px;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            main {
+                padding: 40px;
+                max-width: 900px;
+            }
+
+            h1 {
+                font-size: 3em;
+            }
+
+            h2 {
+                font-size: 2.5em;
+            }
+
+            p {
+                font-size: 1.3em;
+            }
+
+            a.button {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
@@ -127,8 +183,8 @@
                 <dt><a href="https://ssd.ohiosci.org/regional-science-days/" target="_blank" class="link">Regional Science Days Information</a></dt>
                 <dd>Find information on Regional Science Days, including locations, dates, and registration details.</dd>
 
-                <dt><a href="https://www.youtube.com/watch?v=SyzxZHz5wuc" target="_blank" class="link">How to Prepare a Science Fair Project</a></dt>
-                <dd>This YouTube video offers a step-by-step guide on how to prepare a science fair project, from choosing a topic to presenting your findings.</dd>
+                <dt><a href="https://www.youtube.com/watch?v=SyzxZHz5wuc" target="_blank" class="link">2024 SSD Judge Directions</a></dt>
+                <dd>This YouTube video provides instructions on how to judge a science fair project.</dd>
 
                 <dt><a href="https://www.ohioumvsd.com/Judges/PDF/Judges%20-%20Rules.pdf" target="_blank" class="link">Judges' Rules for Science Days</a></dt>
                 <dd>Review the rules and guidelines that judges follow during Science Days to better understand how your project will be evaluated.</dd>
