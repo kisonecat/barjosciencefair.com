@@ -41,7 +41,7 @@
             margin: 10px 0;
         }
 
-        a {
+        a.button {
             color: #ffffff;
             text-decoration: none;
             font-size: 1.5em;
@@ -52,7 +52,7 @@
             transition: background-color 0.3s;
         }
 
-        a:hover {
+        a.button:hover {
             background-color: #333333;
         }
 
@@ -60,15 +60,69 @@
             width: 400px;
             margin-bottom: 20px;
         }
+
+        dl {
+            margin-top: 20px;
+        }
+
+        dt {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #ffffff;
+        }
+
+        dd {
+            margin: 0 0 10px 20px;
+            font-size: 1em;
+            color: #e0e0e0;
+        }
+
+        a.link {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        a.link:hover {
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <img src="logo.png" alt="Barjo Science Fair Logo">
     <h1>Barjo Science Fair</h1>
-    <a href="https://go.osu.edu/zoom-fowler">Zoom Link</a>
+    <a href="https://go.osu.edu/zoom-fowler" class="button">Zoom Link</a>
     <main>
-        <h2>When is the Science Fair?</h2>
-        <p>The science fair will be held on February 6, 2025, from 6pm to 8pm.</p>
+        <h2>About the Science Fair</h2>
+        <p>The Barjo Science Fair is an exciting event for students of Barrington Elementary and Jones Middle School, welcoming all students from kindergarten through 8th grade to participate. It's a hands-on way to get our students engaged in DOING science, sparking curiosity and innovation from a young age.</p>
+
+        <p>The science fair itself will be held on February 6, 2025, from 6pm to 8pm. However, the journey begins much earlier with a kick-off event on September 17, 2024, at 7:30 pm via the Zoom link provided above. Throughout the year, there will be additional meetings to help guide participants in preparing their projects.</p>
+
+        <p>Organized by the Barrington PTO's I Heart Science committee, this science fair not only provides a platform for young scientists to showcase their work but also offers the opportunity for 5th-8th graders to advance to the District 7 Science Fair in March 2025, hosted by Columbus State Community College. There, students can compete for additional prizes and recognition.</p>
+
+        <div class="link-section">
+            <h2>Helpful Resources</h2>
+            <p>Below are some useful links to help you prepare for the science fair:</p>
+
+            <dl>
+                <dt><a href="https://www.societyforscience.org/isef/categories-and-subcategories/all-categories/" target="_blank" class="link">List of ISEF Categories</a></dt>
+                <dd>This link provides a comprehensive list of all categories and subcategories recognized by the International Science and Engineering Fair (ISEF). It can help you choose the appropriate category for your project.</dd>
+
+                <dt><a href="https://partner.projectboard.world/oas/state-science-day-24" target="_blank" class="link">Ohio Academy of Science State Science Day 2024</a></dt>
+                <dd>Visit this link to learn about the upcoming Ohio Academy of Science (OAS) State Science Day 2024. It contains important information for participants and viewers alike.</dd>
+
+                <dt><a href="https://partner.projectboard.world/oas/faq" target="_blank" class="link">State Science Day FAQ</a></dt>
+                <dd>This FAQ section answers common questions about the State Science Day, including project requirements, judging criteria, and more.</dd>
+
+                <dt><a href="https://ssd.ohiosci.org/" target="_blank" class="link">Ohio Science Day Official Website</a></dt>
+                <dd>The official website for Ohio Science Day, where you can find news, updates, and resources related to the event.</dd>
+
+                <dt><a href="https://ssd.ohiosci.org/wp-content/uploads/sites/2/2024/08/SCIENCE-DAY-STANDARDS-2025.pdf" target="_blank" class="link">Science Day Standards 2025</a></dt>
+                <dd>This PDF document outlines the standards and guidelines for Science Day 2025. It is essential reading for anyone preparing a project for submission.</dd>
+
+                <dt><a href="https://www.cscc.edu/docs/science/index.html" target="_blank" class="link">Columbus State Community College Science Department</a></dt>
+                <dd>Explore the resources offered by Columbus State Community College's Science Department, including courses, labs, and research opportunities that might be relevant to your science fair project.</dd>
+            </dl>
+        </div>
     </main>
 </body>
 </html>
