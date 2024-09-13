@@ -5,21 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barjo Science Fair</title>
     <style>
+        :root {
+            --background-color: #df9109;
+            --main-background-color: #f5b663;
+            --text-color: #000000;
+            --secondary-text-color: #333333;
+            --button-color: #000000;
+            --button-hover-color: #333333;
+            --link-color: #0000EE;
+            --link-hover-color: #551A8B;
+            --banner-background: #ffeb3b;
+            --banner-text-color: #000;
+        }
+
         body {
-            background-color: #df9109;
+            background-color: var(--background-color);
             display: flex;
             flex-direction: column;
             align-items: center;
             margin: 0;
-            font-family: sans-serif;
-            color: #000000;
+            font-family: Arial, sans-serif;
+            color: var(--text-color);
             padding: 10px;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
         }
 
         h1 {
             font-size: 2.5em;
             margin: 20px 0;
             text-align: center;
+        }
+
+        .banner {
+            background-color: var(--banner-background);
+            color: var(--banner-text-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
         }
 
         main {
@@ -31,8 +65,8 @@
             width: 100%;
             max-width: 800px;
             padding: 20px;
-            background-color: #f5b663; /* Lighter background color for the main section */
-            border-radius: 10px; /* Rounded corners for a smoother appearance */
+            background-color: var(--main-background-color);
+            border-radius: 10px;
             box-sizing: border-box;
         }
 
@@ -52,7 +86,7 @@
             text-decoration: none;
             font-size: 1.2em;
             margin-top: 20px;
-            background-color: #000000;
+            background-color: var(--button-color);
             padding: 10px 20px;
             border-radius: 5px;
             transition: background-color 0.3s;
@@ -60,7 +94,7 @@
         }
 
         a.button:hover {
-            background-color: #333333;
+            background-color: var(--button-hover-color);
         }
 
         img {
@@ -77,21 +111,22 @@
         dt {
             font-size: 1.2em;
             margin: 10px 0;
-            color: #000000;
+            color: var(--text-color);
         }
 
         dd {
             margin: 0 0 10px 20px;
             font-size: 1em;
-            color: #333333;
+            color: var(--secondary-text-color);
         }
 
         a.link {
-            color: #000000;
+            color: var(--link-color);
             text-decoration: underline;
         }
 
         a.link:hover {
+            color: var(--link-hover-color);
             text-decoration: none;
         }
 
@@ -144,95 +179,104 @@
     </style>
 </head>
 <body>
-    <img src="logo.png" alt="Barjo Science Fair">
-    <a href="https://go.osu.edu/zoom-fowler" class="button">Zoom Link</a>
+    <header>
+        <img src="logo.png" alt="Barjo Science Fair Logo">
+        <a href="https://go.osu.edu/zoom-fowler" class="button">Join Zoom Meeting</a>
+    </header>
+
+    <div class="banner">
+        Under Construction!
+    </div>
+
     <main>
-      <h2>Under Construction!</h2>
-        <h2>About the Science Fair</h2>
-        <p>The Barjo Science Fair is an exciting event for students of <a href="https://barrington.uaschools.org/">Barrington Elementary</a> and <a href="https://jones.uaschools.org/">Jones Middle School</a>, welcoming all students from kindergarten through 8th grade to participate. It's a hands-on way to get our students engaged in <strong>doing</strong> science, sparking curiosity and innovation from a young age.</p>
+        <section>
+            <h2>About the Science Fair</h2>
+            <p>The Barjo Science Fair is an exciting event for students of <a href="https://barrington.uaschools.org/" class="link">Barrington Elementary</a> and <a href="https://jones.uaschools.org/" class="link">Jones Middle School</a>, welcoming all students from kindergarten through 8th grade to participate. It's a hands-on way to get our students engaged in <strong>doing</strong> science, sparking curiosity and innovation from a young age.</p>
 
-        <p>The science fair itself will be held on February 6, 2025, from 6pm to 8pm. However, the journey begins much earlier with a kick-off event on September 17, 2024, at 7:30 pm via the Zoom link provided above. Throughout the year, there will be additional meetings to help guide participants in preparing their projects.</p>
+            <p>The science fair itself will be held on February 6, 2025, from 6pm to 8pm. However, the journey begins much earlier with a kick-off event on September 17, 2024, at 7:30 pm via the Zoom link provided above. Throughout the year, there will be additional meetings to help guide participants in preparing their projects.</p>
 
-        <p>Organized by the Barrington PTO's I Heart Science committee, this science fair not only provides a platform for young scientists to showcase their work but also offers the opportunity for 5th-8th graders to advance to the <a href="https://www.cscc.edu/docs/science/index.html">District 7 Science Fair</a> in March 2025, hosted by Columbus State Community College. There, students can compete for additional prizes and recognition.</p>
+            <p>Organized by the Barrington PTO's I Heart Science committee, this science fair not only provides a platform for young scientists to showcase their work but also offers the opportunity for 5th-8th graders to advance to the <a href="https://www.cscc.edu/docs/science/index.html" class="link">District 7 Science Fair</a> in March 2025, hosted by Columbus State Community College. There, students can compete for additional prizes and recognition.</p>
+        </section>
 
-	<h2>Forms</h2>
+        <section>
+            <h2>Forms</h2>
+            <p>There are a number of <a href="https://www.societyforscience.org/isef/forms/" class="link">ISEF Forms</a> and also a <a href="https://ruleswizard.societyforscience.org/" class="link">rules wizard</a> to determine which forms to fill out.</p>
+        </section>
 
-	<p>There are a number of <a href="https://www.societyforscience.org/isef/forms/">ISEF Forms</a> and also a <a href="https://ruleswizard.societyforscience.org/">rules wizard</a> to determine which forms to fill out.</p>
-	
-	<h2>How to get started?</h2>
-	<p>Below are some useful links to help you prepare for the science fair.</p>
+        <section>
+            <h2>How to Get Started</h2>
+            <p>Below are some useful links to help you prepare for the science fair.</p>
 
-        <dl>
-	  <dt><a href="https://support.projectboard.world/portal/en/kb/articles/science-day-project-types-new">Project types</a></dt>
-	  <dd>Learn more about the different types of projects that are permitted.</dd>
+            <dl>
+                <dt><a href="https://support.projectboard.world/portal/en/kb/articles/science-day-project-types-new" class="link">Project Types</a></dt>
+                <dd>Learn more about the different types of projects that are permitted.</dd>
 
-	  <dt><a href="https://support.projectboard.world/portal/en/kb/articles/tri-fold-board-instructions">Trifold board instructions</a></dt>
-	  <dd>Help getting started with designing a trifold board.</dd>K
-	  
-	  <dt><a href="https://support.projectboard.world/portal/en/kb/articles/hypothesis-based-research-meta-analysis-student-workbook">Workbook for hypothesis-based and meta-analysis projects</a></dt>
-	  <dd>Information for getting started on a hypothesis-based or meta-analysis based project.</dd>
+                <dt><a href="https://support.projectboard.world/portal/en/kb/articles/tri-fold-board-instructions" class="link">Trifold Board Instructions</a></dt>
+                <dd>Help getting started with designing a trifold board.</dd>
 
-	  <dt><a href="https://support.projectboard.world/portal/en/kb/articles/engineering-design-student-workbook">Workbook for engineering design projects</a></dt>
-	  <dd>Information for getting started on an engineering design project.</dd>
+                <dt><a href="https://support.projectboard.world/portal/en/kb/articles/hypothesis-based-research-meta-analysis-student-workbook" class="link">Workbook for Hypothesis-Based and Meta-Analysis Projects</a></dt>
+                <dd>Information for getting started on a hypothesis-based or meta-analysis based project.</dd>
 
-	  <dt><a href="https://support.projectboard.world/portal/en/kb/articles/science-day-topic-worksheet">Worksheet to pick a topic</a></dt>
-	  <dd>If you are looking for help picking a topic, this worksheet guides you through choosing a topic.</dd>
-	  
-                <dt><a href="https://partner.projectboard.world/oas/state-science-day-24" target="_blank" class="link">Examples of previous projects</a></dt>
+                <dt><a href="https://support.projectboard.world/portal/en/kb/articles/engineering-design-student-workbook" class="link">Workbook for Engineering Design Projects</a></dt>
+                <dd>Information for getting started on an engineering design project.</dd>
+
+                <dt><a href="https://support.projectboard.world/portal/en/kb/articles/science-day-topic-worksheet" class="link">Worksheet to Pick a Topic</a></dt>
+                <dd>If you are looking for help picking a topic, this worksheet guides you through choosing a topic.</dd>
+
+                <dt><a href="https://partner.projectboard.world/oas/state-science-day-24" target="_blank" rel="noopener noreferrer" class="link">Examples of Previous Projects</a></dt>
                 <dd>Visit this link to see examples of previous science fair projects.</dd>
 
-	  <dt><a href="https://support.projectboard.world/portal/en/kb/oas/science-day-resources/videos">Helpful videos</a></dt>
-	  <dd>Here are some helpful videos.</dd>
-		
-                <dt><a href="https://www.societyforscience.org/isef/categories-and-subcategories/all-categories/" target="_blank" class="link">List of ISEF Categories</a></dt>
+                <dt><a href="https://support.projectboard.world/portal/en/kb/oas/science-day-resources/videos" class="link">Helpful Videos</a></dt>
+                <dd>Here are some helpful videos.</dd>
+
+                <dt><a href="https://www.societyforscience.org/isef/categories-and-subcategories/all-categories/" target="_blank" rel="noopener noreferrer" class="link">List of ISEF Categories</a></dt>
                 <dd>This link provides a comprehensive list of all categories and subcategories recognized by the International Science and Engineering Fair (ISEF). It can help you choose the appropriate category for your project.</dd>
 
-
-                <dt><a href="https://ssd.ohiosci.org/regional-science-days/" target="_blank" class="link">Regional Science Days Information</a></dt>
+                <dt><a href="https://ssd.ohiosci.org/regional-science-days/" target="_blank" rel="noopener noreferrer" class="link">Regional Science Days Information</a></dt>
                 <dd>Find information on Regional Science Days, including locations, dates, and registration details.</dd>
-		</dl>
+            </dl>
+        </section>
 
-	    
-	<h2>For 5<sup>th</sup>&ndash;8<sup>th</sup> Graders</h2>
-	<dl>
-
-                <dt><a href="https://partner.projectboard.world/oas/faq" target="_blank" class="link">Projectboard Information</a></dt>
+        <section>
+            <h2>For 5<sup>th</sup>&ndash;8<sup>th</sup> Graders</h2>
+            <dl>
+                <dt><a href="https://partner.projectboard.world/oas/faq" target="_blank" rel="noopener noreferrer" class="link">Projectboard Information</a></dt>
                 <dd>This FAQ section answers common questions about the State Science Day, including project requirements, judging criteria, and more.</dd>
 
-		<dt><a href="https://support.projectboard.world/portal/en/kb/articles/ed-research-plan-template-new">Research plan template for engineering design projects</a></dt>
-		<dd>For help with the research paper element for engineering design projects, this provides a template to get started.</dd>
+                <dt><a href="https://support.projectboard.world/portal/en/kb/articles/ed-research-plan-template-new" class="link">Research Plan Template for Engineering Design Projects</a></dt>
+                <dd>For help with the research paper element for engineering design projects, this provides a template to get started.</dd>
 
-		<dt><a href="https://support.projectboard.world/portal/en/kb/articles/hbr-ma-research-plan-template-new">Research plan template for hypothesis-based research</a></dt>
-		<dd>For help with the research paper element for hypothesis-based projects, this provides a template to get started.</dd>
+                <dt><a href="https://support.projectboard.world/portal/en/kb/articles/hbr-ma-research-plan-template-new" class="link">Research Plan Template for Hypothesis-Based Research</a></dt>
+                <dd>For help with the research paper element for hypothesis-based projects, this provides a template to get started.</dd>
 
-		
-		
-                <dt><a href="https://ssd.ohiosci.org/" target="_blank" class="link">Ohio Science Day Official Website</a></dt>
+                <dt><a href="https://ssd.ohiosci.org/" target="_blank" rel="noopener noreferrer" class="link">Ohio Science Day Official Website</a></dt>
                 <dd>The official website for Ohio Science Day, where you can find news, updates, and resources related to the event.</dd>
 
-                <dt><a href="https://ssd.ohiosci.org/wp-content/uploads/sites/2/2024/08/SCIENCE-DAY-STANDARDS-2025.pdf" target="_blank" class="link">Science Day Standards 2025</a></dt>
+                <dt><a href="https://ssd.ohiosci.org/wp-content/uploads/sites/2/2024/08/SCIENCE-DAY-STANDARDS-2025.pdf" target="_blank" rel="noopener noreferrer" class="link">Science Day Standards 2025</a></dt>
                 <dd>This PDF document outlines the standards and guidelines for Science Day 2025. It is essential reading for anyone preparing a project for submission.</dd>
-                <dt><a href="https://www.cscc.edu/docs/science/index.html" target="_blank" class="link">District 7 Science Fair</a></dt>
+
+                <dt><a href="https://www.cscc.edu/docs/science/index.html" target="_blank" rel="noopener noreferrer" class="link">District 7 Science Fair</a></dt>
                 <dd>Explore the resources offered by Columbus State Community College's Science Department, including courses, labs, and research opportunities that might be relevant to your science fair project.</dd>
-	  
-	</dl>
-	
+            </dl>
+        </section>
 
-	<h2>Information Meeting Times</h2>
-	<ul>
-	  <li>September 17 at 7:30<span style="font-variant: small-caps;">PM</span> in <a href="https://go.osu.edu/zoom-fowler">the Zoom room</a>.
-	</ul>
+        <section>
+            <h2>Information Meeting Times</h2>
+            <ul>
+                <li>September 17 at 7:30 <span style="font-variant: small-caps;">PM</span> in <a href="https://go.osu.edu/zoom-fowler" class="link">the Zoom room</a>.</li>
+            </ul>
+        </section>
 
-	<h2>Judging</h2>
-	<dl>
-	  <dt><a href="https://www.youtube.com/watch?v=SyzxZHz5wuc" target="_blank" class="link">2024 SSD Judge Directions</a></dt>
-          <dd>This YouTube video provides instructions on how to judge a science fair project.</dd>
+        <section>
+            <h2>Judging</h2>
+            <dl>
+                <dt><a href="https://www.youtube.com/watch?v=SyzxZHz5wuc" target="_blank" rel="noopener noreferrer" class="link">2024 SSD Judge Directions</a></dt>
+                <dd>This YouTube video provides instructions on how to judge a science fair project.</dd>
 
-          <dt><a href="https://www.ohioumvsd.com/Judges/PDF/Judges%20-%20Rules.pdf" target="_blank" class="link">Rules for judges at Science Days</a></dt>
-          <dd>Review the rules and guidelines that judges follow during Science Days to better understand how your project will be evaluated.</dd>
-        </dl>
-
-
+                <dt><a href="https://www.ohioumvsd.com/Judges/PDF/Judges%20-%20Rules.pdf" target="_blank" rel="noopener noreferrer" class="link">Rules for Judges at Science Days</a></dt>
+                <dd>Review the rules and guidelines that judges follow during Science Days to better understand how your project will be evaluated.</dd>
+            </dl>
+        </section>
     </main>
 </body>
 </html>
