@@ -1,247 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barjo Science Fair</title>
-    <style>
-        :root {
-            --background-color: #df9109;
-            --main-background-color: #f5b663;
-            --text-color: #000000;
-            --secondary-text-color: #333333;
-            --button-color: #000000;
-            --button-hover-color: #333333;
-            --link-color: #0000EE;
-            --link-hover-color: #551A8B;
-            --banner-background: #ffeb3b;
-            --banner-text-color: #000;
-        }
-
-        body {
-            background-color: var(--background-color);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: var(--text-color);
-            padding: 10px;
-        }
-
-        header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            max-width: 800px;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 2.5em;
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .banner {
-            background-color: var(--banner-background);
-            color: var(--banner-text-color);
-            padding: 10px 20px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            font-weight: bold;
-            text-align: center;
-            width: 100%;
-            max-width: 800px;
-        }
-
-        main {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            margin-top: 2em;
-            text-align: left;
-            width: 100%;
-            max-width: 800px;
-            padding: 20px;
-            background-color: var(--main-background-color);
-            border-radius: 10px;
-            box-sizing: border-box;
-        }
-
-        h2 {
-            font-size: 2em;
-            margin: 20px 0;
-        }
-
-        p {
-            font-size: 1.2em;
-            margin: 10px 0;
-        }
-
-        a.button {
-            display: inline-block;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1.2em;
-            margin-top: 20px;
-            background-color: var(--button-color);
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            text-align: center;
-        }
-
-        a.button:hover {
-            background-color: var(--button-hover-color);
-        }
-
-        img {
-            width: 100%;
-            max-width: 512px;
-            margin-bottom: 20px;
-            height: auto;
-        }
-
-        dl {
-            margin-top: 20px;
-        }
-
-        dt {
-            font-size: 1.2em;
-            margin: 10px 0;
-            color: var(--text-color);
-        }
-
-        dd {
-            margin: 0 0 10px 20px;
-            font-size: 1em;
-            color: var(--secondary-text-color);
-        }
-
-        a.link {
-            color: var(--link-color);
-            text-decoration: underline;
-        }
-
-        a.link:hover {
-            color: var(--link-hover-color);
-            text-decoration: none;
-        }
-
-        /* Responsive design */
-        @media (max-width: 512px) {
-            h1 {
-                font-size: 2em;
-            }
-
-            h2 {
-                font-size: 1.5em;
-            }
-
-            p {
-                font-size: 1em;
-            }
-
-            a.button {
-                font-size: 1em;
-                padding: 10px;
-            }
-
-            img {
-                max-width: 100%;
-            }
-        }
-
-        @media (min-width: 1200px) {
-            main {
-                padding: 40px;
-                max-width: 900px;
-            }
-
-            h1 {
-                font-size: 3em;
-            }
-
-            h2 {
-                font-size: 2.5em;
-            }
-
-            p {
-                font-size: 1.3em;
-            }
-
-            a.button {
-                font-size: 1.5em;
-            }
-        }
-
-	.timeline {
-            width: 80%;
-            margin: 0 auto;
-        }
-        .event {
-            padding: 10px;
-            margin: 10px 0;
-        }
-        .event-title {
-            font-weight: bold;
-        }
-        .date {
-            color: black;
-            font-weight: bold;
-        }
-        .contact-info {
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barjo Science Fair</title>
+<style>
+:root {
+    --background-color: #df9109;
+    --main-background-color: #f5b663;
+    --text-color: #000000;
+    --secondary-text-color: #333333;
+    --button-color: #000000;
+    --button-hover-color: #333333;
+    --link-color: #0000EE;
+    --link-hover-color: #551A8B;
+    --banner-background: #ffeb3b;
+    --banner-text-color: #000;
+}
+body {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    padding: 10px;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+h1 {
+    font-size: 2.5em;
+    margin: 20px 0;
+    text-align: center;
+}
+.banner {
+    background-color: var(--banner-background);
+    color: var(--banner-text-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 2em;
+    text-align: left;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: var(--main-background-color);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+h2 {
+    font-size: 2em;
+    margin: 20px 0;
+}
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+a.button {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-top: 20px;
+    background-color: var(--button-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+a.button:hover {
+    background-color: var(--button-hover-color);
+}
+img {
+    width: 100%;
+    max-width: 512px;
+    margin-bottom: 20px;
+    height: auto;
+}
+dl {
+    margin-top: 20px;
+}
+dt {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: var(--text-color);
+}
+dd {
+    margin: 0 0 10px 20px;
+    font-size: 1em;
+    color: var(--secondary-text-color);
+}
+a.link {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+a.link:hover {
+    color: var(--link-hover-color);
+    text-decoration: none;
+}
+@media (max-width: 512px) {
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.5em; }
+    p { font-size: 1em; }
+    a.button { font-size: 1em; padding: 10px; }
+    img { max-width: 100%; }
+}
+@media (min-width: 1200px) {
+    main { padding: 40px; max-width: 900px; }
+    h1 { font-size: 3em; }
+    h2 { font-size: 2.5em; }
+    p { font-size: 1.3em; }
+    a.button { font-size: 1.5em; }
+}
+.timeline {
+    width: 80%;
+    margin: 0 auto;
+}
+.event {
+    padding: 10px;
+    margin: 10px 0;
+}
+.event-title {
+    font-weight: bold;
+}
+.date {
+    color: black;
+    font-weight: bold;
+}
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+}
+ul.example-projects {
+    margin: 10px 0 10px 20px;
+    list-style-type: disc;
+}
+</style>
 </head>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F3WPYBQMND"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-F3WPYBQMND');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-F3WPYBQMND');
 </script>
+
 <body>
-    <header>
-        <img src="logo.png" alt="Barjo Science Fair Logo">
+<header>
+    <img src="logo.png" alt="Barjo Science Fair Logo">
+    <a href="https://go.osu.edu/zoom-fowler" class="button">Join Zoom Meeting</a>
+    <a href="https://forms.gle/T7Zth4GLwCDD1ZHh8" class="button">Preliminary Interest Form</a>
+</header>
 
-        <a href="https://go.osu.edu/zoom-fowler" class="button">Join Zoom Meeting</a>
-        <a href="https://forms.gle/T7Zth4GLwCDD1ZHh8" class="button">Preliminary Interest Form</a>
-    </header>
+<main>
+<section>
+    <h2>Preliminary Interest Form</h2>
+    <p>Please <a href="https://forms.gle/T7Zth4GLwCDD1ZHh8">complete the preliminary interest form</a> to let us know about your interest in the Barjo Science Fair.</p>
+</section>
 
-    <main>
-	<section>
-            <h2>Preliminary Interst Form</h2>
+<section>
+    <h2>About the Science Fair</h2>
+    <p>Welcome to the Barjo Science Fair! This community event invites students from <a href="https://barrington.uaschools.org/" class="link">Barrington Elementary</a> and <a href="https://jones.uaschools.org/" class="link">Jones Middle School</a> to dive into the joy of scientific discovery. Whether you’re asking “What happens if…?” or testing a creative idea, the Barjo Science Fair is your chance to explore, experiment, and share what you’ve learned.</p>
+    <p>The fair will be held on <strong>February 4, 2026, from 6–8 PM</strong> at Barrington Elementary. It all begins with a kickoff webinar on <strong>November 5, 2025, at 8 PM</strong> (Zoom link above). Throughout the year, we’ll offer meetings and office hours to help students prepare their projects.</p>
+    <p>Students in grades 5–8 may choose to submit their projects to the <em>District 7 Science Fair</em> on <strong>March 21, 2026</strong> at Columbus State Community College, where they can compete for additional prizes and recognition. Younger students are encouraged to participate for fun, creativity, and curiosity!</p>
+</section>
 
-	    <p>Please <a href="https://forms.gle/T7Zth4GLwCDD1ZHh8">complete the preliminary interest form</a> to let us know about your interest in the Barjo Science Fair.</p>
-	    
-	</section>
+<section>
+    <h2>Project Guidelines</h2>
+    <p>If you are <strong>not</strong> planning to submit your project to the regional or state fair, your project topic can be about almost anything that interests you! Build, test, or explore — we welcome all curious minds.</p>
+    <p><strong>However,</strong> if your project involves <em>humans, vertebrate animals, hazardous materials, or potentially dangerous procedures</em>, you’ll need <strong>pre-approval from our IRB</strong> (Institutional Review Board) before beginning. This ensures that all projects are conducted safely and ethically.</p>
+    <p>For students intending to advance to the regional fair, please be aware that additional rules and forms apply — see the “For 5th–8th Graders” section below for links and templates.</p>
 
-      <section>
-            <h2>About the Science Fair</h2>
-            <p>The Barjo Science Fair is an exciting event for students of <a href="https://barrington.uaschools.org/" class="link">Barrington Elementary</a> and <a href="https://jones.uaschools.org/" class="link">Jones Middle School</a>, welcoming all students from kindergarten through 8th grade to participate. It's a hands-on way to get our students engaged in <strong>doing</strong> science, sparking curiosity and innovation from a young age.</p>
+    <h3>Sample Projects from Past Years</h3>
+    <ul class="example-projects">
+        <li>Crunching the Numbers: Investigating the Iron Content in Cereal</li>
+        <li>Evaluating the Effectiveness of Natural Insect Repellents</li>
+        <li>The Avocado Adventure</li>
+        <li>How Do Microplastics in Soil Affect Plant Growth?</li>
+        <li>Newton’s Cradle</li>
+        <li>The Water Cycle</li>
+        <li>Bristlebots: Factors Influencing Mobility</li>
+        <li>Investigating Volcanoes</li>
+        <li>Do Plants Like Music?</li>
+        <li>Guitar Science</li>
+        <li>Crystal Growth</li>
+    </ul>
 
-            <p>The science fair itself will be held on February 4, 2026, from 6pm to 8pm. The journey begins with a webinar on November 5, 2025, at 8:00 pm via the Zoom link provided above. Throughout the year, there will be additional meetings to help guide participants in preparing their projects.</p>
-
-            <p>Organized by the Barrington PTO's I Heart Science committee, this science fair not only provides a platform for young scientists to showcase their work but also offers the opportunity for 5th-8th graders to advance to the <em>District 7 Science Fair</em> on March 21, 2026, hosted by Columbus State Community College. There, students can compete for additional monetary prizes and recognition.</p>
-
-	    <p>For more information, please reach out to <a href="mailto:barjo@barjosciencefair.com">barjo@barjosciencefair.com</a>.
-
-        </section>
+    <p>Every great project starts with a question. What are you curious about? What do you want to understand or improve? Follow that spark — and we’ll help you make it shine!</p>
+</section>
 
 	
-        <section>
-            <h2>Forms</h2>
-            <p>There are a number of <a href="https://www.societyforscience.org/isef/forms/" class="link">ISEF Forms</a> and also a <a href="https://ruleswizard.societyforscience.org/" class="link">rules wizard</a> to determine which forms to fill out.</p>
-        </section>
 
         <section>
-            <h2>How to Get Started</h2>
+          <h2>How to Get Started</h2>
+
+	  
             <p>Below are some useful links to help you prepare for the science fair.</p>
 
             <dl>
@@ -313,6 +283,12 @@
 	      <li>We will be running office hours to help folks prepare for the February science fair. You can participate at <a href="https://go.osu.edu/zoom-fowler">our Zoom link</a>.</li>
             </ul>
         </section>
+
+	        <section>
+            <h2>Forms</h2>
+            <p>There are a number of <a href="https://www.societyforscience.org/isef/forms/" class="link">ISEF Forms</a> and also a <a href="https://ruleswizard.societyforscience.org/" class="link">rules wizard</a> to determine which forms to fill out.</p>
+        </section>
+
 
 	<section>
 	  <h2>Timeline</h2>
