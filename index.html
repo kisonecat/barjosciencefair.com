@@ -1,342 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Barjo Science Fair</title>
-<style>
-:root {
-    --background-color: #df9109;
-    --main-background-color: #f5b663;
-    --text-color: #000000;
-    --secondary-text-color: #333333;
-    --button-color: #000000;
-    --button-hover-color: #333333;
-    --link-color: #0000EE;
-    --link-hover-color: #551A8B;
-    --banner-background: #ffeb3b;
-    --banner-text-color: #000;
-}
-body {
-    background-color: var(--background-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: var(--text-color);
-    padding: 10px;
-}
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 800px;
-    margin-bottom: 20px;
-}
-h1 {
-    font-size: 2.5em;
-    margin: 20px 0;
-    text-align: center;
-}
-.banner {
-    background-color: var(--banner-background);
-    color: var(--banner-text-color);
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-    max-width: 800px;
-}
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 2em;
-    text-align: left;
-    width: 100%;
-    max-width: 800px;
-    padding: 20px;
-    background-color: var(--main-background-color);
-    border-radius: 10px;
-    box-sizing: border-box;
-}
-h2 {
-    font-size: 2em;
-    margin: 20px 0;
-}
-p {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-a.button {
-    display: inline-block;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.2em;
-    margin-top: 20px;
-    background-color: var(--button-color);
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    text-align: center;
-}
-a.button:hover {
-    background-color: var(--button-hover-color);
-}
-img {
-    width: 100%;
-    max-width: 512px;
-    margin-bottom: 20px;
-    height: auto;
-}
-dl {
-    margin-top: 20px;
-}
-dt {
-    font-size: 1.2em;
-    margin: 10px 0;
-    color: var(--text-color);
-}
-dd {
-    margin: 0 0 10px 20px;
-    font-size: 1em;
-    color: var(--secondary-text-color);
-}
-a.link {
-    color: var(--link-color);
-    text-decoration: underline;
-}
-a.link:hover {
-    color: var(--link-hover-color);
-    text-decoration: none;
-}
-@media (max-width: 512px) {
-    h1 { font-size: 2em; }
-    h2 { font-size: 1.5em; }
-    p { font-size: 1em; }
-    a.button { font-size: 1em; padding: 10px; }
-    img { max-width: 100%; }
-}
-@media (min-width: 1200px) {
-    main { padding: 40px; max-width: 900px; }
-    h1 { font-size: 3em; }
-    h2 { font-size: 2.5em; }
-    p { font-size: 1.3em; }
-    a.button { font-size: 1.5em; }
-}
-.timeline {
-    width: 80%;
-    margin: 0 auto;
-}
-.event {
-    padding: 10px;
-    margin: 10px 0;
-}
-.event-title {
-    font-weight: bold;
-}
-.date {
-    color: black;
-    font-weight: bold;
-}
-.contact-info {
-    text-align: center;
-    margin-top: 20px;
-}
-ul.example-projects {
-    margin: 10px 0 10px 20px;
-    list-style-type: disc;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barjo Science Fair</title>
+  <style>
+    :root {
+      --color-primary: #df9109;
+      --color-secondary: #f5b663;
+      --color-dark: #333333;
+      --color-text: #222222;
+      --color-light: #ffffff;
+      --color-button: #333333;
+      --color-button-hover: #000000;
+      --color-link: #0056b3;
+      --color-link-hover: #003366;
+      --banner-bg: #ffeb3b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--color-primary);
+      color: var(--color-text);
+      font-family: “Segoe UI”, Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1.5;
+    }
+    header {
+      width: 100%;
+      max-width: 900px;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      max-width: 200px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    a.btn {
+      display: inline-block;
+      background-color: var(--color-button);
+      color: var(--color-light);
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.25s;
+    }
+    a.btn:hover {
+      background-color: var(--color-button-hover);
+    }
+
+    .banner {
+      background-color: var(--banner-bg);
+      width: 100%;
+      max-width: 900px;
+      padding: 12px 20px;
+      border-radius: 6px;
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+
+    main {
+      width: 100%;
+      max-width: 900px;
+      background-color: var(--color-secondary);
+      padding: 30px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.8em;
+      color: var(--color-dark);
+    }
+    h2 {
+      font-size: 2em;
+      margin-bottom: 0.5em;
+      color: var(--color-dark);
+    }
+    h3 {
+      margin-top: 1.5em;
+      font-size: 1.5em;
+      color: var(--color-dark);
+    }
+    p {
+      margin: 0.75em 0;
+    }
+    a {
+      color: var(--color-link);
+      text-decoration: none;
+    }
+    a:hover {
+      color: var(--color-link-hover);
+      text-decoration: underline;
+    }
+    ul, dl {
+      margin: 1em 0;
+      padding-left: 1.2em;
+    }
+    dt {
+      font-weight: bold;
+      margin-top: 0.8em;
+    }
+    dd {
+      margin: 0.4em 0 0.8em 1em;
+      color: var(--color-dark);
+    }
+
+    .timeline {
+      border-left: 3px solid var(--color-dark);
+      padding-left: 20px;
+    }
+    .timeline .event {
+      margin-bottom: 1.8em;
+      position: relative;
+    }
+    .timeline .event::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-color: var(--color-dark);
+      border-radius: 50%;
+      position: absolute;
+      left: -6px;
+      top: 4px;
+    }
+    .timeline .date {
+      font-weight: bold;
+    }
+
+    .contact {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid var(--color-dark);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2em; }
+      h2 { font-size: 1.6em; }
+      main { padding: 20px; }
+      a.btn { padding: 10px 16px; }
+    }
+  </style>
 </head>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F3WPYBQMND"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-F3WPYBQMND');
-</script>
-
 <body>
-<header>
-    <img src="logo.png" alt="Barjo Science Fair Logo">
-    <a href="https://go.osu.edu/zoom-fowler" class="button">Join Zoom Meeting</a>
-    <a href="https://forms.gle/T7Zth4GLwCDD1ZHh8" class="button">Preliminary Interest Form</a>
-</header>
+  <header>
+    <img src="logo.png" alt="Barjo Science Fair Logo" />
+    <div class="btn-group">
+      <a href="https://go.osu.edu/zoom-fowler" class="btn">Join Zoom Webinar</a>
+      <a href="https://forms.gle/T7Zth4GLwCDD1ZHh8" class="btn">Preliminary Interest Form</a>
+    </div>
+  </header>
 
-<main>
-<section>
-    <h2>Preliminary Interest Form</h2>
-    <p>Please <a href="https://forms.gle/T7Zth4GLwCDD1ZHh8">complete the preliminary interest form</a> to let us know about your interest in the Barjo Science Fair.</p>
-</section>
+  <div class="banner">
+    🧪 Kickoff Meeting: November 5, 2025 at 8:00 PM (Zoom) — All are welcome!
+  </div>
 
-<section>
-    <h2>About the Science Fair</h2>
-    <p>Welcome to the Barjo Science Fair! This community event invites students from <a href="https://barrington.uaschools.org/" class="link">Barrington Elementary</a> and <a href="https://jones.uaschools.org/" class="link">Jones Middle School</a> to dive into the joy of scientific discovery. Whether you’re asking “What happens if…?” or testing a creative idea, the Barjo Science Fair is your chance to explore, experiment, and share what you’ve learned.</p>
-    <p>The fair will be held on <strong>February 4, 2026, from 6–8 PM</strong> at Barrington Elementary. It all begins with a kickoff webinar on <strong>November 5, 2025, at 8 PM</strong> (Zoom link above). Throughout the year, we’ll offer meetings and office hours to help students prepare their projects.</p>
-    <p>Students in grades 5–8 may choose to submit their projects to the <em>District 7 Science Fair</em> on <strong>March 21, 2026</strong> at Columbus State Community College, where they can compete for additional prizes and recognition. Younger students are encouraged to participate for fun, creativity, and curiosity!</p>
-</section>
+  <main>
+    <section>
+      <h2>Why Participate?</h2>
+      <p>
+        The Barjo Science Fair is a fun, community-focused event where students from
+        <a href="https://barrington.uaschools.org/">Barrington Elementary</a> and
+        <a href="https://jones.uaschools.org/">Jones Middle School</a> can explore their curiosity, conduct experiments, and share their findings.
+      </p>
+      <p>
+        On <strong>February 4, 2026 (6:00–8:00 PM)</strong> at Barrington Elementary, students will present their projects in a supportive, engaging environment.
+        Additionally, students in grades 5–8 may advance to the <em>District 7 Science Fair</em> on <strong>March 21, 2026</strong>, held at Columbus State Community College.
+      </p>
+    </section>
 
-<section>
-    <h2>Project Guidelines</h2>
-    <p>If you are <strong>not</strong> planning to submit your project to the regional or state fair, your project topic can be about almost anything that interests you! Build, test, or explore — we welcome all curious minds.</p>
-    <p><strong>However,</strong> if your project involves <em>humans, vertebrate animals, hazardous materials, or potentially dangerous procedures</em>, you’ll need <strong>pre-approval from our IRB</strong> (Institutional Review Board) before beginning. This ensures that all projects are conducted safely and ethically.</p>
-    <p>For students intending to advance to the regional fair, please be aware that additional rules and forms apply — see the “For 5th–8th Graders” section below for links and templates.</p>
+    <section>
+      <h2>Project Guidelines & Rules</h2>
+      <p>
+        Most projects are welcome — pick a question, test it, analyze results, and present. <strong>And if you only want to present at the Barjo Fair, and are <em>not</em> presenting at the district fair, then we can <em>accept essentially any project.</em></strong> However, projects involving <em>humans, vertebrate animals, hazardous materials, or risky procedures</em> require prior approval from our IRB (Institutional Review Board).
+      </p>
+      <p>
+        If you aim to submit to the regional fair, additional rules and forms will apply (see next section).
+      </p>
 
-    <h3>Sample Projects from Past Years</h3>
-    <ul class="example-projects">
-        <li>Bristlebots: Factors Influencing Mobility</li>
-        <li>Crunching the Numbers: Investigating the Iron Content in Cereal</li>
-        <li>Crystal Growth</li>
-        <li>Do Plants Like Music?</li>
-        <li>Evaluating the Effectiveness of Natural Insect Repellents</li>
-        <li>Guitar Science</li>
-        <li>How Do Microplastics in Soil Affect Plant Growth?</li>
-        <li>Investigating Volcanoes</li>
-        <li>Newton’s Cradle</li>
-        <li>The Avocado Adventure</li>
-        <li>The Water Cycle</li>
-        <li>What are the fastest hotwheel cars?</li>
-    </ul>
-
-    <p>Every great project starts with a question. What are you curious about? What do you want to understand or improve? Follow that spark — and we’ll help you make it shine!</p>
-</section>
-
-	
-
-        <section>
-          <h2>How to Get Started</h2>
-	  
-            <p>Below are some useful links to help you prepare for the science fair.</p>
-
-            <dl>
-	      <dt><a href="https://docs.google.com/document/d/1empBNJEgR8Xf8NdZeBcDfff0HnCnqUpKqJG72EoIuS0/pub">Project types</a></dt>
-	      <dd>Learn more about the different types of projects that are permitted at the Barjo fair.</dd>
-
-	      <dt><a href="UAPL-Reference-Digital-Resources-for-Kids.pdf">UA Public Library resources for science fair</a></dt>
-	      <dd>The Upper Arlington Public Library offers digital resources for kids, including National Geographic Kids, World Book Kids, Explora Elementary School, and Science Reference Source, accessible with a UAPL library card.</dd>
-	      
-                <dt><a href="https://support.projectboard.world/portal/en/kb/articles/science-day-topic-worksheet" class="link">Worksheet to Pick a Topic</a></dt>
-                <dd>If you are looking for help picking a topic, this worksheet guides you through choosing a topic.</dd>
-
-		  <dt><a href="https://www.societyforscience.org/isef/categories-and-subcategories/all-categories/" target="_blank" rel="noopener noreferrer" class="link">List of ISEF Categories</a></dt>
-                <dd>This link provides a comprehensive list of all categories and subcategories recognized by the International Science and Engineering Fair (ISEF). It can help you choose the appropriate category for your project.</dd>
-		
-              <dt><a href="https://support.projectboard.world/portal/en/kb/oas/science-day-resources/videos" class="link">Helpful Videos</a></dt>
-                <dd>Here are some helpful videos.</dd>
-
-                <dt><a href="https://steminthemiddle.net/your-ultimate-guide-to-science-fair-boards-layout/" class="link">Trifold Board Instructions</a></dt>
-                <dd>Help getting started with designing a trifold board.</dd>
-
-		<dt><a href="https://support.projectboard.world/portal/en/kb/articles/what-is-plagiarism-25-7-2024">Plagiarism</a></dt>
-		<dd>Information about plagiarism and science fair projects.</dd>
-
-            </dl>
-        </section>
+      <h3>Example Past Projects</h3>
+      <ul>
+        <li>Bristlebots: Mobility Factors</li>
+        <li>Iron Content in Cereal</li>
+        <li>Crystal Growth Experiments</li>
+        <li>Do Plants Grow Better to Music?</li>
+        <li>Natural Insect Repellents</li>
+        <li>Guitar Acoustics & Vibration</li>
+        <li>Microplastics in Soil vs. Plant Growth</li>
+        <li>Volcano Modeling</li>
+        <li>Newton’s Cradle Demonstrations</li>
+        <li>Avocado Ripening Effects</li>
+        <li>Water Cycle Models</li>
+        <li>Speed Testing of Toy Cars</li>
+      </ul>
+      <p>
+        Every great project starts with a question. What are you curious about? Let’s make it your project.
+      </p>
+    </section>
 
         <section>
-          <h2>For District Science Fair Projects</h2>
-<p>More specific paperwork and formatting is required if you want to submit your project to be judged at the district fair. Below is some information about this, and feel free to reach out to us at <a href="mailto:barjo@barjosciencefair.com">barjo@barjosciencefair.com</a>.</p>
-	  
-            <dl>
-                <dt><a href="https://partner.projectboard.world/oas/faq" target="_blank" rel="noopener noreferrer" class="link">Projectboard Information</a></dt>
-                <dd>This FAQ section answers common questions about the State Science Day, including project requirements, judging criteria, and more.</dd>
+      <h2>How to Get Started</h2>
+      <p>
+        Not sure where to begin? This year, we're supporting participants with regular office hours, guided webinars, and a resource hub to walk you step-by-step.
+      </p>
+      <dl>
+        <dt><a href="https://docs.google.com/document/d/1empBNJEgR8Xf8NdZeBcDfff0HnCnqUpKqJG72EoIuS0/pub">Project Types Guide</a></dt>
+        <dd>Overview of different allowable project types (experimental, engineering, observational, etc.).</dd>
 
-                <dt><a href="https://support.projectboard.world/portal/en/kb/articles/ed-research-plan-template-new" class="link">Research Plan Template for Engineering Design Projects</a></dt>
-                <dd>For help with the research paper element for engineering design projects, this provides a template to get started.</dd>
+        <dt><a href="UAPL-Reference-Digital-Resources-for-Kids.pdf">UA Public Library – Science Resources</a></dt>
+        <dd>Access digital tools like National Geographic Kids, World Book Kids, and Science Reference Source (requires UAPL membership).</dd>
 
-                <dt><a href="https://support.projectboard.world/portal/en/kb/articles/hbr-ma-research-plan-template-new" class="link">Research Plan Template for Hypothesis-Based Research</a></dt>
-                <dd>For help with the research paper element for hypothesis-based projects, this provides a template to get started.</dd>
+        <dt><a href="https://support.projectboard.world/portal/en/kb/articles/science-day-topic-worksheet">Topic Brainstorming Worksheet</a></dt>
+        <dd>A guided worksheet to help you choose an engaging, testable question for your project.</dd>
 
-                <dt><a href="https://ssd.ohiosci.org/" target="_blank" rel="noopener noreferrer" class="link">Ohio Science Day Official Website</a></dt>
-                <dd>The official website for Ohio Science Day, where you can find news, updates, and resources related to the event.</dd>
+        <dt><a href="https://www.societyforscience.org/isef/categories-and-subcategories/all-categories/" target="_blank" rel="noopener noreferrer">ISEF Categories Reference</a></dt>
+        <dd>List of categories recognized by the International Science & Engineering Fair (ISEF).</dd>
 
-                <dt><a href="https://support.projectboard.world/portal/en/kb/articles/science-day-standards" target="_blank" rel="noopener noreferrer" class="link">Science Day Standards 2025&ndash;2026</a></dt>
-                <dd>This document outlines the standards and guidelines for Science Day. It is essential reading for anyone preparing a project for submission.</dd>
+        <dt><a href="https://support.projectboard.world/portal/en/kb/articles/what-is-plagiarism-25-7-2024">Understanding Plagiarism</a></dt>
+        <dd>Ethics and citation guidelines every project should follow.</dd>
 
-                <dt><a href="https://www.cscc.edu/docs/science/index.html" target="_blank" rel="noopener noreferrer" class="link">District 7 Science Fair</a></dt>
-                <dd>Explore the resources offered by Columbus State Community College's Science Department, including courses, labs, and research opportunities that might be relevant to your science fair project.</dd>
+        <dt><a href="https://steminthemiddle.net/your-ultimate-guide-to-science-fair-boards-layout/">Trifold Board Layout Tips</a></dt>
+        <dd>Design advice and examples for your display board.</dd>
 
-		<dt><a href="https://ssd.ohiosci.org/regional-science-days/" target="_blank" rel="noopener noreferrer" class="link">Regional Science Days Information</a></dt>
-                <dd>Find information on Regional Science Days, including locations, dates, and registration details.</dd>
+        <dt><a href="https://support.projectboard.world/portal/en/kb/oas/science-day-resources/videos">Helpful Videos & Tutorials</a></dt>
+        <dd>Video walkthroughs on planning, executing experiments, and preparing presentations.</dd>
+      </dl>
+    </section>
+    
+    <section>
+      <h2>District & Regional Participation</h2>
+      <p>
+        Students in grades 5–8 may compete in the <em>District 7 Science Fair</em>. Projects advancing to district or state levels need to follow stricter guidelines. Reach out with questions at <a href="mailto:barjo@barjosciencefair.com">barjo@barjosciencefair.com</a>.
+      </p>
+      <dl>
+        <dt><a href="https://partner.projectboard.world/oas/faq" target="_blank" rel="noopener noreferrer">ProjectBoard FAQ</a></dt>
+        <dd>Comprehensive answers about judging, rules, and requirements for project submissions.</dd>
 
-		<dt><a href="https://support.projectboard.world/portal/en/kb/articles/student-guide-to-science-days-new">Student guide for entering a project</a></dt>
-		<dd>Information for a student interested in submitting a project to the district science fair.</dd>
+        <dt><a href="https://support.projectboard.world/portal/en/kb/articles/ed-research-plan-template-new">Engineering Research Plan Template</a></dt>
+        <dd>Template for the research write-up if your project is design-based.</dd>
 
-		                <dt><a href="https://support.projectboard.world/portal/en/kb/articles/hypothesis-based-research-meta-analysis-student-workbook" class="link">Workbook for Hypothesis-Based and Meta-Analysis Projects</a></dt>
-                <dd>Information for getting started on a hypothesis-based or meta-analysis based project.</dd>
+        <dt><a href="https://support.projectboard.world/portal/en/kb/articles/hbr-ma-research-plan-template-new">Hypothesis Research Plan Template</a></dt>
+        <dd>Template for hypothesis-based science projects.</dd>
 
-                <dt><a href="https://support.projectboard.world/portal/en/kb/articles/engineering-design-student-workbook" class="link">Workbook for Engineering Design Projects</a></dt>
-                <dd>Information for getting started on an engineering design project.</dd>
+        <dt><a href="https://ssd.ohiosci.org/" target="_blank" rel="noopener noreferrer">Ohio Science Day</a></dt>
+        <dd>Official site of the Ohio Science Day competition.</dd>
 
-                <dt><a href="https://partner.projectboard.world/oas/state-science-day-24" target="_blank" rel="noopener noreferrer" class="link">Examples of Previous Projects</a></dt>
-                <dd>Visit this link to see examples of previous science fair projects.</dd>
+        <dt><a href="https://support.projectboard.world/portal/en/kb/articles/science-day-standards" target="_blank" rel="noopener noreferrer">Science Day Standards 2025–2026</a></dt>
+        <dd>Rules and criteria for final judging.</dd>
 
-            </dl>
+        <dt><a href="https://www.cscc.edu/docs/science/index.html" target="_blank" rel="noopener noreferrer">District 7 Science Fair (CSCC)</a></dt>
+        <dd>Information for the host college and regional program.</dd>
 
-        </section>
+        <dt><a href="https://support.projectboard.world/portal/en/kb/articles/student-guide-to-science-days-new">Student Guide: Entry Steps</a></dt>
+        <dd>Step-by-step guide to entering and formatting your project for competition.</dd>
 
-        <section>
-            <h2>Information Meeting Times</h2>
-            <ul>
-	      <li>We will be running office hours to help folks prepare for the February science fair. You can participate at <a href="https://go.osu.edu/zoom-fowler">our Zoom link</a>.</li>
-            </ul>
-        </section>
+        <dt><a href="https://support.projectboard.world/portal/en/kb/articles/hypothesis-based-research-meta-analysis-student-workbook">Hypothesis & Meta-Analysis Workbook</a></dt>
+        <dd>Workbook for hypothesis-driven or meta-analysis projects.</dd>
 
-	        <section>
-            <h2>Forms</h2>
-            <p>There are a number of <a href="https://www.societyforscience.org/isef/forms/" class="link">ISEF Forms</a> and also a <a href="https://ruleswizard.societyforscience.org/" class="link">rules wizard</a> to determine which forms to fill out.</p>
-        </section>
+        <dt><a href="https://support.projectboard.world/portal/en/kb/articles/engineering-design-student-workbook">Engineering Design Workbook</a></dt>
+        <dd>Workbook to guide you through an engineering-style project.</dd>
 
+        <dt><a href="https://partner.projectboard.world/oas/state-science-day-24" target="_blank" rel="noopener noreferrer">Previous Project Examples</a></dt>
+        <dd>Browse past projects submitted to state-level competition.</dd>
+      </dl>
+    </section>
 
-	<section>
-	  <h2>Timeline</h2>
-	  <p>The <a href="https://support.projectboard.world/portal/en/kb/articles/oas-program-timeline">Ohio Academy of Science's timeline</a> fits into our timeline.</p>
-	  <div class="timeline">
+    <section>
+      <h2>Timeline & Key Dates</h2>
+      <p>The following schedule outlines important milestones for this year’s fair:</p>
+      <div class="timeline">
+        <div class="event">
+          <p class="date">November 5, 2025</p>
+          <p>Kickoff / Introduction Webinar (8:00 PM via Zoom)</p>
+        </div>
+        <div class="event">
+          <p class="date">December 15, 2025</p>
+          <p>IRB Submission Deadline</p>
+        </div>
+        <div class="event">
+          <p class="date">January 12, 2026</p>
+          <p>Final Project Submission Due</p>
+        </div>
+        <div class="event">
+          <p class="date">January 31, 2026</p>
+          <p>OAS Program Account Re-activation Closes (5:00 PM)</p>
+        </div>
+        <div class="event">
+          <p class="date">February 4, 2026</p>
+          <p>Barjo Science Fair (6:00 PM at Barrington Elementary)</p>
+        </div>
+      </div>
+    </section>
 
-            <div class="event">
-              <p class="date">November 5, 2025</p>
-              <p>Initial meeting for the Barjo Science Fair at 8:00 pm; join <a href="https://go.osu.edu/zoom-fowler">the Zoom room for this webinar</a>.
-            </div>
+    <section>
+      <h2>Judging & Volunteer Opportunities</h2>
+      <p>
+        Interested in volunteering or judging? We’d love your help! Please fill out the <a href="https://forms.gle/CW9CHsV1tTchnovq6">Judge Registration Form</a>.
+      </p>
+      <dl>
+        <dt><a href="https://www.ohioumvsd.com/Judges/PDF/Judges%20-%20Rules.pdf" target="_blank" rel="noopener noreferrer">Judging Rules (Ohio Science Days)</a></dt>
+        <dd>Learn how judges evaluate projects and how scoring works.</dd>
 
-	    <div class="event">
-              <p class="date">December 15, 2025</p>
-              <p>IRB submission deadline for the Barjo Science Fair</p>
-            </div>
-	    
-	    <div class="event">
-              <p class="date">January 12, 2026</p>
-              <p>Project submission deadline for the Barjo Science Fair</p>
-            </div>
+        <dt><a href="https://support.projectboard.world/portal/en/kb/articles/2025-judging-score-cards-vertical-layout">Sample Scorecard (5th–8th Grade)</a></dt>
+        <dd>Example judging rubric used at Ohio Science Days.</dd>
+      </dl>
+    </section>
+  </main>
 
-            <div class="event">
-              <p class="date">January 31, 2026</p>
-              <p>The Ohio Academy of Science Program Account Creation/Re-activation Closes at 5:00 pm</p>
-            </div>
+  <footer class="contact">
+    <p>Email us: <a href="mailto:barjo@barjosciencefair.com">barjo@barjosciencefair.com</a></p>
+    <p>&copy; 2025 Barjo Science Fair</p>
+  </footer>
 
-	    <div class="event">
-              <p class="date">February 4, 2026</p>
-              <p>Barjo Science Fair at Barrington Elementary School at 6pm</p>
-            </div>
-
-	</section>
-	
-        <section>
-          <h2>Judging</h2>
-	  <p>If you are interested in judging, please <a href="https://forms.gle/CW9CHsV1tTchnovq6">complete the Barjo Judge Registration Form</a>.</p>
-	  
-                <dt><a href="https://www.ohioumvsd.com/Judges/PDF/Judges%20-%20Rules.pdf" target="_blank" rel="noopener noreferrer" class="link">Rules for Judges at Science Days</a></dt>
-                <dd>Review the rules and guidelines that judges follow during Science Days to better understand how your project will be evaluated.</dd>
-
-		<dt><a href="https://support.projectboard.world/portal/en/kb/articles/2025-judging-score-cards-vertical-layout">Judging Scorecard 5<sup>th</sup>&ndash;8<sup>th</sup> Grade</a></dt>
-		<dd>A sample scorecard for a judge of a science fair project.</dd>
-            </dl>
-        </section>
-    </main>
+  <!-- Analytics / tracking -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F3WPYBQMND"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-F3WPYBQMND');
+  </script>
 </body>
 </html>
+
